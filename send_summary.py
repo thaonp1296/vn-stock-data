@@ -26,7 +26,7 @@ TOP_N = _config["report"].get("top_picks", 3)
 DATA_FILE = Path("data/stock_data.csv")
 
 GMAIL_USER = os.environ["GMAIL_USER"]          # set trong GitHub Secrets
-GMAIL_PASSWORD = os.environ["GMAIL_APP_PASSWORD"]  # set trong GitHub Secrets
+GMAIL_PASSWORD = "".join(os.environ["GMAIL_APP_PASSWORD"].split())  # set trong GitHub Secrets
 EMAIL_TO = os.environ.get("EMAIL_TO", GMAIL_USER)
 
 TODAY = date.today().strftime("%Y-%m-%d")
